@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:xlo_clone/app/common/custom_drawer/custom_drawer_widget.dart';
 
 class HomePage extends StatefulWidget {
   final String title;
@@ -13,11 +14,9 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text('XLO Clone'),
       ),
-      body: Column(
-        children: <Widget>[],
-      ),
+      drawer: CustomDrawerWidget(),
     );
   }
 }
