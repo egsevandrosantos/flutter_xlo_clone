@@ -6,8 +6,10 @@ class IconSectionController = _IconSectionBase with _$IconSectionController;
 
 abstract class _IconSectionBase with Store {
   @observable
-  int _pageSelected = 0;
-  get pageSelected => _pageSelected;
+  int value = 0;
+
   @action
-  setPageSelected(int pageSelected) { if (_pageSelected != pageSelected) _pageSelected = pageSelected; }
+  void increment() {
+    value++;
+  }
 }

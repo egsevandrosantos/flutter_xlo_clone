@@ -6,10 +6,10 @@ class CustomDrawerController = _CustomDrawerBase with _$CustomDrawerController;
 
 abstract class _CustomDrawerBase with Store {
   @observable
-  int value = 0;
-
+  int _pageSelected = 0;
+  get pageSelected => _pageSelected;
   @action
-  void increment() {
-    value++;
+  setPageSelected(int pageSelected) {
+    if (_pageSelected != pageSelected) _pageSelected = pageSelected;
   }
 }

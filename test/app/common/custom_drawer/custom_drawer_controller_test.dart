@@ -16,11 +16,5 @@ void main() {
     test("First Test", () {
       expect(customdrawer, isInstanceOf<CustomDrawerController>());
     });
-
-    test("Set Value", () {
-      expect(customdrawer.value, equals(0));
-      customdrawer.increment();
-      expect(customdrawer.value, equals(1));
-    });
   });
 }
